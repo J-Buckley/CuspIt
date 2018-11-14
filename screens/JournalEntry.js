@@ -23,7 +23,6 @@ export class JournalEntry extends React.Component {
         {"\n"}{"\n"}
         <View style={styles.container}>
           <TextInput multiline = {true} maxLength = {200} style = {styles.searchInput} placeholder = 'Meal desription'/>
-          onChangeText={static setItem(key: FoodJournal, value: TextInput(, [callback]: ?(error: ?Error) => void)}
         </View>
       </View>
     );
