@@ -36,16 +36,17 @@ export default class HomeScreen extends React.Component {
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>Welcome to your CuspIt food journal</Text>
+            <Text style={styles.getStartedText}>Welcome to your Cuspit food journal!</Text>
 
             
           </View>
 
           <View style={styles.helpContainer}>
             <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>Visit the CuspIt website</Text>
+              <Text style={styles.helpLinkText}>Visit the Cuspit website</Text>
             </TouchableOpacity>
           </View>
+
         </ScrollView>
 
         
@@ -80,6 +81,13 @@ export default class HomeScreen extends React.Component {
     );
   };
 }
+
+  _handleInstaPress = () => {
+    Linking.openURL(
+      'https://www.instagram.com/cuspit/'
+    );
+  };
+
 
 const styles = StyleSheet.create({
   container: {

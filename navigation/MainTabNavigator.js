@@ -1,12 +1,12 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import JournalScreen from '../screens/JournalScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import JournalEntry from '../screens/JournalEntry';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -28,6 +28,7 @@ HomeStack.navigationOptions = {
 
 const JournalStack = createStackNavigator({
   Journal: JournalScreen,
+  Entry: JournalEntry,
 });
 
 JournalStack.navigationOptions = {
@@ -60,7 +61,7 @@ const SettingsStack = createStackNavigator({
 
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Profile',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -75,3 +76,11 @@ export default createBottomTabNavigator({
   LinksStack,
   SettingsStack,
 });
+
+
+
+
+
+
+
+
